@@ -1,6 +1,6 @@
 ﻿// aisd_lab2_var12.h : включаемый файл для стандартных системных включаемых файлов
 // или включаемые файлы для конкретного проекта.
-
+// паспорт снилс инн прописное 3 фотки рез флюры реквизиты сбера 
 #pragma once
 
 #include <vector>
@@ -17,6 +17,11 @@ namespace my
 		vector<pair<Key, Value>> table;
 
 	public:
+
+		int Get_size()
+		{
+			return this->size;
+		}
 
 		Hash_table(int size) : size(size), table(size, std::make_pair(Key{}, Value{})) {}
 
@@ -43,6 +48,22 @@ namespace my
 			swap(other);
 			return *this;
 		}
+
+		void print()
+		{
+			for (int i = 0; i < size; i++)
+			{
+				cout << "(" << table[i].first << ", " << table[i].second << ") ";
+			}
+			cout << endl;
+		}
+
+		void insert(Key key, Value value)
+		{
+			int index = hash_function(key);
+			table[index] = make_pair(key, value);
+		}
+
 	};
 }
 // TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.

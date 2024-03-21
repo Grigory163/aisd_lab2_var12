@@ -8,5 +8,10 @@ using namespace my;
 
 int main()
 {
-	my::Hash_table<int, int> zopa{4};
+	my::Hash_table<int, std::string> zopa{4};
+	zopa.insert(3, "pipiska");
+	zopa.print();
+	/*my::Hash_table<int, int> penis{6};
+	zopa = penis;*/
+	//cout << zopa.Get_size();
 }

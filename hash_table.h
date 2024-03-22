@@ -43,7 +43,7 @@ namespace my
 
         // Хеш-функция h(k) = k mod m
         int hashFunction(Key key) {
-            return key % TABLE_SIZE;
+            return std::hash<Key>{}(key) % TABLE_SIZE;
         }
 
         // Рассчет коэффициента заполненности

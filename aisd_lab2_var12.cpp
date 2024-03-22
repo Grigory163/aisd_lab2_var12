@@ -8,23 +8,13 @@ using namespace my;
 
 int main()
 {
-	HashTable<int, string> zopa(4);
-	
-	zopa.insert(1, "hui");
-	zopa.insert(2, "govno");
-	zopa.insert(2, "asshole");
-	zopa.insert_or_assign(3, " 10 ");
-	zopa.insert_or_assign(1, "hz");
-	zopa.insert(2, "govno");
-	zopa.insert(2, "asshole");
-	zopa.insert(2, "govno");
-	zopa.insert(2, "asshole");
-	zopa.insert(2, "govno");
-	zopa.insert(2, "asshole");
-	auto aaa = zopa;
-	aaa.print();
-	/*my::Hash_table<int, int> penis{6};
-	zopa = penis;*/
-	//cout << zopa.Get_size();
+	HashTable<string, string> zopa(4);
+	zopa.insert("1", "a");
+	zopa.insert("2", "b");
+	zopa.insert("2", "c");
+	zopa.insert("3", "d");
+	zopa.insert_or_assign("2", "ebal hesh tablicy");
+	zopa.print();
+
 	
 }

@@ -7,14 +7,8 @@ using namespace std;
 using namespace my;
 
 int main()
-{
-	HashTable<string, string> zopa(4);
-	zopa.insert("1", "a");
-	zopa.insert("2", "b");
-	zopa.insert("2", "c");
-	zopa.insert("3", "d");
-	zopa.insert_or_assign("2", "ebal hesh tablicy");
-	zopa.print();
-
-	
+{	
+    vector<int>input_vec = { 1, 1, 1, 1, 2, 2, 2, 3, 3, 4 };
+    print_numbers_count(count_numbers(input_vec), input_vec.size());
+    return 0;
 }
